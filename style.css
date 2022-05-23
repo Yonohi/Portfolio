@@ -8,7 +8,7 @@
     /* Color */
     --backgr-color: linear-gradient(rgb(189, 71, 71) 25vh, rgb(245, 215, 215) 100vh);
     --backgr-nav-color: rgb(189, 71, 71);
-    --backgr-proj: #ecacac;
+    --backgr-proj: rgb(189, 71, 71);
     --text-body-color: black;
     --text-nav-color: white;
     --title-bg-color: rgb(247, 233, 235);
@@ -502,7 +502,14 @@ ul {
 }
 
 .card_title:hover {
+    background-color : rgb(189, 71, 71);
+    color: white;
+}
 
+.card_title.active {
+    border-color: black;
+    background-color: rgb(189, 71, 71);
+    color: white;
 }
 
 .card_list {
@@ -526,7 +533,8 @@ ul {
 
 .card_content {
     position: relative;
-    background-color: var(--backgr-proj);
+    background-image: linear-gradient(rgb(189, 71, 71), rgb(245, 215, 215));
+    color: white;
     min-height: 20vh;
     /* on enlève 30px de padding */
     width: calc(96vw - 210px);
