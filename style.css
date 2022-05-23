@@ -73,6 +73,7 @@ ul {
 .card {
     width: 50%;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .card_title, .title_mini {
@@ -242,7 +243,7 @@ ul {
     height: 600px;
     width: 600px;
     margin: 0;
-    background: radial-gradient(circle at 100px 100px, #ee7676, white);
+    background: radial-gradient(circle at 100px 100px, var(--backgr-nav-color), white);
     box-shadow: 3px 3px 4px 4px white;
 }
 
@@ -317,8 +318,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 150px;
+    width: 13vw;
+    height: 13vw;
     text-align: center;
     font-family: 'Archivo Black', sans-serif;
     font-size: 0.8em;
@@ -326,14 +327,20 @@ ul {
     margin: 0;
     transform: translate(-50%, -50%);
 }
-.tache {
-    position: absolute;
-    width: calc(var(--width-story)*0.20);
-    height: calc(var(--width-story)*0.18);
 
+.mini_circle {
+    position: absolute;
+    display: block;
+    background: black;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: radial-gradient(circle at 1px 1px, var(--backgr-nav-color), white);
+    box-shadow: 3px 3px 4px 4px white;
 }
-.in_tache {
-    z-index: 3;
+.in_circle {
+    z-index: 99;
     text-shadow: 0 0 5px white;
 
 }
@@ -341,38 +348,43 @@ ul {
 #step1 {
     top: 16%;
     left: 27%;
+    z-index: 2;
 }
 
 #step2 {
-    top: 13%;
-    left: 78%;
+    top: 14%;
+    left: 74%;
+    z-index: 4;
 }
 
 #step3 {
-    top: 54%;
-    left: 83%;
+    top: 52%;
+    left: 82%;
+    z-index: 6;
 }
 
 #step4 {
     top: 50%;
     left: 50%;
+    z-index: 8;
 }
 
 #step5 {
-    top: 60%;
-    left: 15%;
+    top: 57%;
+    left: 20%;
+    z-index: 10;
 }
 
 #step6 {
-    top: 85%;
-    left: 35%;
+    top: 86%;
+    left: 38%;
+    z-index: 12;
 }
 
 .path {
     height: calc(var(--width-story)*0.3);
     width: calc(var(--width-story)*0.3);
     position: absolute;
-    z-index: 4;
 }
 .position_img_long {
     transform: translate(0,-10%);
@@ -388,36 +400,43 @@ ul {
     top: 13%;
     left: 11%;
     transform: translate(-50%, -50%) rotate(-150deg);
+    z-index: 1;
 }
 #path1 {
-    top: 20%;
-    left: 51%;
+    top: 15%;
+    left: 50%;
     transform: translate(-50%, -50%) rotate(5deg);
+    z-index: 3;
 }
 #path2 {
     top: 32%;
     left: 82%;
-    transform: translate(-50%, -50%) rotate(85deg);
+    transform: translate(-50%, -50%) rotate(80deg);
+    z-index: 5;
 }
 #path3 {
     top: 54%;
     left: 67%;
     transform: translate(-50%, -50%) rotate(175deg);
+    z-index: 7;
 }
 #path4 {
-    top: 51%;
-    left: 31%;
-    transform: translate(-50%, -50%) rotate(-20deg);
+    top: 49%;
+    left: 33%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    z-index: 9;
 }
 #path5 {
     top: 77%;
-    left: 20%;
-    transform: translate(-50%, -50%) rotate(-140deg);
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(-130deg);
+    z-index: 11;
 }
 #path6 {
     top: 85%;
-    left: 53%;
+    left: 54%;
     transform: translate(-50%, -50%) rotate(170deg);
+    z-index: 13;
 }
 
 
@@ -474,6 +493,16 @@ ul {
     margin-left: 10px;
     margin-right: 5%;
     font-size: 1.2em;
+}
+.click {
+    position: absolute;
+    left: 10%;
+    top: 10px;
+    transform: translate(-50%, -50%) rotate(160deg);
+}
+
+.card_title:hover {
+
 }
 
 .card_list {
