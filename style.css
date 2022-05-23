@@ -1,0 +1,589 @@
+/*========= Google fonts =========*/
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+/*========= Variables CSS =========*/
+:root {
+    /* Color */
+    --backgr-color: rgb(245, 215, 215);
+    --backgr-nav-color: #ee7676;
+    --backgr-proj: #ecacac;
+    --text-body-color: black;
+    --text-nav-color: white;
+    --title-bg-color: rgb(247, 233, 235);
+    --title-color: black;
+
+    /* Font size */
+    --text-size-nav: 1.3em;
+    --text-size-nav-citation : 1em;
+    --text-size-body: 1.2em;
+    --title-mini-size: 1.2em;
+
+    /* Size of elements */
+    --width-story: 80vw;
+}
+/*========= Comportement de base =========*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--backgr-color)  ;
+    color: var(--text-body-color);
+    margin: 0; 
+}
+
+.sidebar{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+a.nav_link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+a {
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+.logo_django, .logo_linkedin {
+    filter: invert(100%);
+}
+
+.zone {
+    min-height: 100vh;
+    padding: 2%;
+}
+
+.big_title {
+    font-family: 'Archivo Black', sans-serif;
+    background-color: var(--title-bg-color);
+    color: var(--title-color);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px 40px;
+    margin: 20px 10%
+}
+
+.card {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.card_title, .title_mini {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: var(--title-mini-size);
+    background-color: var(--title-bg-color);
+    color: var(--title-color);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px 40px;   
+}
+
+.card_title {
+    margin: 10px 10%;
+    width: auto;
+    cursor: pointer;
+    border-style: solid solid none solid;
+    border-width: 1px;
+    border-color: rgb(247, 233, 235);
+}
+
+.short_desc {
+    margin: auto 10%;
+}
+
+.title_mini {
+    align-self: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.proj_img {
+    max-height: 50vh;
+    max-width: 100%;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(238, 118, 118, 0.3);
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 5;
+}
+
+.close {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    top: 2%;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    background-color: steelblue;
+    border: solid black;
+    opacity: 1;
+    font-size: 35px;
+    font-weight: bolder;
+    transform: rotate(45deg);
+    z-index: 6;
+}
+
+/*========= Navbar =========*/
+.sidebar {
+    position: fixed;
+    background-color: var(--backgr-nav-color);
+    width: 180px;
+    height: 100vh;
+    margin: auto;
+    font-size: var(--text-size-nav);
+    z-index: 1;
+}
+
+
+.nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-nav-color);
+}
+
+.nav_head {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    
+    
+}
+
+.photo_nav {
+    position: relative;
+    top: -5px;
+    height: 110px;
+    clip-path: circle();
+}
+
+.nav_title {
+    margin: 0;
+    position: relative;
+    top:-15px;
+}
+
+.nav_list{
+    padding-left: 10px;
+    flex:2;
+    flex-direction: column;
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_link {
+    margin-left: 10px;
+}
+
+.nav_item {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.nav_logo {
+    height: 28px;
+}
+
+.nav_footer {
+    font-family: 'Caveat', cursive;
+    font-size: var(--text-size-nav-citation);
+    padding: 10px;
+}
+
+/* Zone Centrale */
+
+.true_body {
+    margin-left: 180px;
+    font-family: 'Nunito', sans-serif;
+    font-size: var(--text-size-body);
+    background-image: url(Images/petales.png);
+}
+
+/* Accueil */
+
+.bg_cerisier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(100);
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    background: black;
+    border-radius: 100%;
+    height: 600px;
+    width: 600px;
+    margin: 0;
+    background: radial-gradient(circle at 100px 100px, #ee7676, white);
+    box-shadow: 3px 3px 4px 4px white;
+}
+
+.logo_accueil {
+    position: absolute;
+    height: 100px;
+    z-index: 1;
+}
+
+.logo_accueil:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: 0.5s;
+}
+
+/* Trigonométrie SOH CAH TOA */
+.logo_django {
+    top:79.316%;
+    left: 29.43%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_css {
+    top:39.184%;
+    left: 83.29%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_js {
+    top:79.316%;
+    left: 70.57%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_python {
+    top:15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_html {
+    top:39.184%;
+    left: 16.71%;
+    transform: translate(-50%, -50%);
+}
+
+.text_pres {
+    text-align: center;
+    z-index: 1;
+    font-family: 'Caveat', cursive;
+    color: white;
+    font-size: 1.3em;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.4em;
+}
+
+/* Profil */
+.plan {
+    height: calc(var(--width-story)*0.7);
+    width: var(--width-story);
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    
+}
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.8em;
+    position: absolute;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+.tache {
+    position: absolute;
+    width: calc(var(--width-story)*0.20);
+    height: calc(var(--width-story)*0.18);
+
+}
+.in_tache {
+    z-index: 3;
+    text-shadow: 0 0 5px white;
+
+}
+
+#step1 {
+    top: 16%;
+    left: 27%;
+}
+
+#step2 {
+    top: 13%;
+    left: 78%;
+}
+
+#step3 {
+    top: 54%;
+    left: 83%;
+}
+
+#step4 {
+    top: 50%;
+    left: 50%;
+}
+
+#step5 {
+    top: 60%;
+    left: 15%;
+}
+
+#step6 {
+    top: 85%;
+    left: 35%;
+}
+
+.path {
+    height: calc(var(--width-story)*0.3);
+    width: calc(var(--width-story)*0.3);
+    position: absolute;
+    z-index: 4;
+}
+.position_img_long {
+    transform: translate(0,-10%);
+}
+.position_img {
+    transform: translate(-25%,5%);
+}
+.path_img {
+    transform: rotate(130deg);
+    height: calc(var(--width-story)*0.3);
+}
+#path0 {
+    top: 13%;
+    left: 11%;
+    transform: translate(-50%, -50%) rotate(-150deg);
+}
+#path1 {
+    top: 20%;
+    left: 51%;
+    transform: translate(-50%, -50%) rotate(5deg);
+}
+#path2 {
+    top: 32%;
+    left: 82%;
+    transform: translate(-50%, -50%) rotate(85deg);
+}
+#path3 {
+    top: 54%;
+    left: 67%;
+    transform: translate(-50%, -50%) rotate(175deg);
+}
+#path4 {
+    top: 51%;
+    left: 31%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+}
+#path5 {
+    top: 77%;
+    left: 20%;
+    transform: translate(-50%, -50%) rotate(-140deg);
+}
+#path6 {
+    top: 85%;
+    left: 53%;
+    transform: translate(-50%, -50%) rotate(170deg);
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_bloc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.level_up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.2em;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.level_up:hover {
+    transform: scale(1.2);
+    transition: 2s;
+}
+
+.text_level {
+    width: 80px;
+}
+
+.icon_level {
+    height: 35px;
+}
+
+/* Work */
+.header_proj {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.github {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px;
+    width: 50%;
+}
+
+.link_github {
+    text-decoration: underline;
+    color: white;
+    margin-left: 10px;
+    margin-right: 5%;
+    font-size: 1.2em;
+}
+
+.card_list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Largeur en prenant en compte les 2% de padding et les 180px de nav */
+    width: calc(96vw - 180px);
+}
+
+.card {
+    min-width: 50%;
+}
+
+.short_desc {
+    height: 30px;
+    position: relative;
+    /* mettre z index à 1 en meme temps que display block */
+    z-index: 0;
+    font-weight: bolder;
+}
+
+.card_content {
+    position: relative;
+    background-color: var(--backgr-proj);
+    min-height: 20vh;
+    /* on enlève 30px de padding */
+    width: calc(96vw - 210px);
+    /* on prend en compte le pixel de bordure du titre */
+    top: -41px;
+    padding: 15px;
+    border-radius: 20px; 
+    z-index: 1;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card .right {
+    left: calc((-96vw + 180px)/2);
+}
+
+.title_proj {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.desc_proj {
+    width: 100%;
+}
+
+.bloc_img {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.img_modal {
+    position: relative;
+    height: 90%;
+    max-width: 90%;
+    margin: 0;
+    top: 5%;
+    left: 20px;
+}
+
+.btn_pres {
+    width: 100%;
+    text-align: center;   
+}
+
+/* CV */
+
+button {
+    background-color: #5199EA;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    font-family: 'Archivo Black', sans-serif;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    color: white;
+  }
+
+.img_cv {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 70vh;
+}
+
+/* Me Suivre */
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link_linkedin {
+    text-decoration: underline;
+    color: white;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
