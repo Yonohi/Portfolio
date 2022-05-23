@@ -6,8 +6,8 @@
 /*========= Variables CSS =========*/
 :root {
     /* Color */
-    --backgr-color: rgb(245, 215, 215);
-    --backgr-nav-color: #ee7676;
+    --backgr-color: linear-gradient(rgb(189, 71, 71) 25vh, rgb(245, 215, 215) 100vh);
+    --backgr-nav-color: rgb(189, 71, 71);
     --backgr-proj: #ecacac;
     --text-body-color: black;
     --text-nav-color: white;
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    background-color: var(--backgr-color)  ;
+    background-image: var(--backgr-color)  ;
     color: var(--text-body-color);
     margin: 0; 
 }
