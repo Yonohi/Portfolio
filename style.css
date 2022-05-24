@@ -231,7 +231,6 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    filter: brightness(100);
 }
 
 .circle {
