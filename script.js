@@ -21,7 +21,7 @@ for (let i = 1; i <= 13; i++) {
         for (let j = 1; j <= 13; j++) {
             if ((i%2 == 0 && j == (i-1)) || (i%2 == 1 && j == (i+1))){
                 cards[j-1].style.display = 'none';
-                projects[i-1].classList.remove('active');
+                projects[j-1].classList.remove('active');
             } 
         };
         if (cards[i-1].style.display == 'none') {

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oleo+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*========= Variables CSS =========*/
 :root {
     /* Color */
@@ -91,9 +92,6 @@ ul {
     margin: 10px 10%;
     width: auto;
     cursor: pointer;
-    border-style: solid solid none solid;
-    border-width: 1px;
-    border-color: rgb(247, 233, 235);
 }
 
 .short_desc {
@@ -221,7 +219,7 @@ ul {
 
 .true_body {
     margin-left: 180px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: var(--text-size-body);
     background-image: url(Images/petales.png);
 }
@@ -448,29 +446,17 @@ ul {
 .text_bloc {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-.level_up {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.tome {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 1.2em;
-    margin-left: 50px;
-    margin-right: 50px;
+    align-self: center;
 }
-
-.level_up:hover {
-    transform: scale(1.2);
-    transition: 2s;
-}
-
-.text_level {
-    width: 80px;
-}
-
-.icon_level {
-    height: 35px;
+.text_bloc p {
+    width: 80%;
+    margin-left: 10%;
+    
 }
 
 /* Work */
@@ -507,7 +493,6 @@ ul {
 }
 
 .card_title.active {
-    border-color: black;
     background-color: rgb(189, 71, 71);
     color: white;
 }
@@ -539,7 +524,7 @@ ul {
     /* on enlève 30px de padding */
     width: calc(96vw - 210px);
     /* on prend en compte le pixel de bordure du titre */
-    top: -41px;
+    top: -40px;
     padding: 15px;
     border-radius: 20px; 
     z-index: 1;
@@ -590,11 +575,11 @@ ul {
 /* CV */
 
 button {
-    background-color: #5199EA;
+    background-color: rgb(189, 71, 71);
     cursor: pointer;
     border-radius: 6px;
     font-size: 0.9em;
-    padding: 5px 10px;
+    padding: 8px 15px;
     font-family: 'Archivo Black', sans-serif;
     transition-duration: 0.2s;
 }
