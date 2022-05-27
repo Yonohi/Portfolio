@@ -5,7 +5,7 @@ let cards = [];
 let modal = document.getElementsByClassName('modal')[0];
 let imgModal = document.getElementsByClassName('img_modal')[0];
 let body = document.getElementsByTagName('body')[0];
-
+let screen = "big";
 // Récupération des élément du DOM
 for (let i = 1; i <= nbProject; i++) {
     projects.push(document.getElementById(`project_${i}`));
@@ -19,8 +19,9 @@ for (let i = 1; i <= nbProject; i++) {
 
 for (let i = 1; i <= nbProject; i++) {
     projects[i-1].addEventListener('click', function() {
+        screen = getComputedStyle(body).getPropertyValue('--screen').replace(/\W/g, '');
         for (let j = 1; j <= nbProject; j++) {
-            if ((i%2 == 0 && j == (i-1)) || (i%2 == 1 && j == (i+1))){
+            if ((screen != "small") && ((i%2 == 0 && j == (i-1)) || (i%2 == 1 && j == (i+1)))){
                 cards[j-1].style.display = 'none';
                 projects[j-1].classList.remove('active');
             } 
