@@ -16,15 +16,18 @@ for (let i = 1; i <= nbProject; i++) {
 for (let i = 1; i <= nbProject; i++) {
     cards[i-1].style.display = 'none'
 };
-
+let j = 0
 for (let i = 1; i <= nbProject; i++) {
     projects[i-1].addEventListener('click', function() {
         screen = getComputedStyle(body).getPropertyValue('--screen').replace(/\W/g, '');
-        for (let j = 1; j <= nbProject; j++) {
-            if ((screen != "small") && ((i%2 == 0 && j == (i-1)) || (i%2 == 1 && j == (i+1)))){
-                cards[j-1].style.display = 'none';
-                projects[j-1].classList.remove('active');
-            } 
+        if (screen != "small" && i != 13){
+            if (i%2 == 0) { 
+                j = i-1;
+            } else if (i%2 == 1) {
+                j = i+1;
+            }
+            cards[j-1].style.display = 'none';
+            projects[j-1].classList.remove('active');
         };
         if (cards[i-1].style.display == 'none') {
             projects[i-1].classList.add('active');
