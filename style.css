@@ -641,9 +641,15 @@ button:hover {
         justify-content: center;
         margin-left: 0;
     }
-
+    .nav_logo {
+        display: none;
+    }
     .nav_link {
-        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        height: 100%;
+        ;
     }
 
     .nav_footer {
@@ -702,12 +708,15 @@ button:hover {
     body {
         --screen : small;
     }
+    .sidebar {
+        height: 60px;
+    }
     .nav_title {
         display: none;
     }
     .photo_nav {
         height: 60px;
-        top: 10px;
+        top: 0px;
     }
     .nav_logo {
         height: 25px;
