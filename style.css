@@ -23,7 +23,7 @@
     --title-mini-size: 1.2em;
 
     /* Size of elements */
-    --width-story: 80vw;
+    --width-story: 75vw;
 }
 /*========= Comportement de base =========*/
 html {
@@ -116,14 +116,12 @@ ul {
 
 .modal {
     display: none;
-    justify-content: center;
     position: fixed;
-    background-color: rgba(238, 118, 118, 0.3);
+    background-color: rgba(238, 118, 118, 0.5);
     width: 100vw;
     height: 100vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     margin: 0;
     z-index: 5;
 }
@@ -132,7 +130,8 @@ ul {
     cursor: pointer;
     display: flex;
     position: relative;
-    top: 2%;
+    top: 1%;
+    left: calc(5vw + 180px);
     justify-content: center;
     align-items: center;
     background: black;
@@ -145,7 +144,7 @@ ul {
     opacity: 1;
     font-size: 35px;
     font-weight: bolder;
-    transform: rotate(45deg);
+    transform: translate( -50%, 0) rotate(45deg);
     z-index: 6;
 }
 
@@ -312,7 +311,7 @@ ul {
     width: var(--width-story);
     display: block;
     position: relative;
-    margin-left: 20px;
+    
     
 }
 .step {
@@ -347,37 +346,37 @@ ul {
 
 #step1 {
     top: 16%;
-    left: 27%;
+    left: 32%;
     z-index: 2;
 }
 
 #step2 {
     top: 14%;
-    left: 74%;
+    left: 79%;
     z-index: 4;
 }
 
 #step3 {
     top: 52%;
-    left: 82%;
+    left: 87%;
     z-index: 6;
 }
 
 #step4 {
     top: 50%;
-    left: 50%;
+    left: 55%;
     z-index: 8;
 }
 
 #step5 {
     top: 57%;
-    left: 20%;
+    left: 25%;
     z-index: 10;
 }
 
 #step6 {
     top: 86%;
-    left: 38%;
+    left: 43%;
     z-index: 12;
 }
 
@@ -398,43 +397,43 @@ ul {
 }
 #path0 {
     top: 13%;
-    left: 11%;
+    left: 16%;
     transform: translate(-50%, -50%) rotate(-150deg);
     z-index: 1;
 }
 #path1 {
     top: 15%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%) rotate(5deg);
     z-index: 3;
 }
 #path2 {
     top: 32%;
-    left: 82%;
+    left: 87%;
     transform: translate(-50%, -50%) rotate(80deg);
     z-index: 5;
 }
 #path3 {
     top: 54%;
-    left: 67%;
+    left: 72%;
     transform: translate(-50%, -50%) rotate(175deg);
     z-index: 7;
 }
 #path4 {
     top: 49%;
-    left: 33%;
+    left: 38%;
     transform: translate(-50%, -50%) rotate(-10deg);
     z-index: 9;
 }
 #path5 {
     top: 77%;
-    left: 25%;
+    left: 30%;
     transform: translate(-50%, -50%) rotate(-130deg);
     z-index: 11;
 }
 #path6 {
     top: 85%;
-    left: 54%;
+    left: 59%;
     transform: translate(-50%, -50%) rotate(170deg);
     z-index: 13;
 }
@@ -558,14 +557,21 @@ ul {
     align-items: center;
     margin: 3%;
 }
-
-.img_modal {
+.conteneur_img_modal {
+    display: flex;
     position: relative;
-    height: 90%;
-    max-width: 90%;
+    background-color: rgba(238, 118, 118);
+    height: 90vh;
+    width: calc(90vw - 180px);
     margin: 0;
     top: 5%;
-    left: 20px;
+    left: calc(5vw + 180px);
+}
+
+.img_modal {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .btn_pres {
@@ -613,9 +619,18 @@ button:hover {
 
 /* Media queries */
 @media screen and (max-width: 900px) {
+    :root {
+        --text-size-nav: 1.1em;
+        --text-size-nav-citation : 1em;
+        --text-size-body: 1em;
+        --text-size-big-title: 1.2em;
+        --title-mini-size: 1.2em;
+        --text-size-tome: 1.3em;
+    }
     .sidebar {
         position: sticky;
         top: 0;
+        left: 0;
         width: 100vw;
         height: 80px;
     }
@@ -685,24 +700,40 @@ button:hover {
     .in_circle {
         font-size: 0.7em;
     }
+    .tome {
+        font-size: var(--text-size-tome);
+    }
     .card_content {
         width: calc(96vw - 30px);
     }
     .card .right {
         left: calc(-96vw/2);
     }
+    .conteneur_img_modal {
+        height: calc(90vh - 80px);
+        width: 90vw;
+        top: calc(5vh + 80px);
+        left: 5%;
+    }
+    .img_modal {
+        top: calc(5vh + 80px);
+    }
+    .close {
+        top: calc(1% + 80px);
+        left: 5vw;
+    }
 }
 
 @media screen and (max-width: 600px) {
     :root {
         /* Font size */
-        --text-size-nav: 0.6em;
+        --text-size-nav: 0.7em;
         --text-size-body: 0.9em;
         --text-size-big-title: 1.1em;
         --title-mini-size: 1em;
         --text-size-tome: 1em;
         --text-size-in-circle: 0.5em;
-        --width-story: 100vw;
+        --width-story: 90vw;
     }
 
     body {
@@ -728,7 +759,7 @@ button:hover {
         margin-bottom: 10px;
     }
     .plan {
-        margin-left: 5px;
+        margin-left: 0px;
     }
     .in_circle {
         font-size: var(--text-size-in-circle);
@@ -754,5 +785,15 @@ button:hover {
     }
     .card .right {
         left: 0;
+    }
+    .conteneur_img_modal {
+        height: calc(90vh - 60px);
+        top: calc(5vh + 60px);
+    }
+    .img_modal {
+        top: calc(5vh + 60px);
+    }
+    .close {
+        top: calc(1% + 60px);
     }
 }
