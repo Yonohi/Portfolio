@@ -46,13 +46,19 @@
     <div class="zone home" id="home">
         <img class="bg_cerisier" src="Images/cerisier.png" alt="image de cerisier">
         <figure class="circle">
-            <img class="logo_accueil logo_html" src="Images/logo/html_icon.png" alt="logo html">
-            <img class="logo_accueil logo_css" src="Images/logo/css_icon.png" alt="logo css">
-            <img class="logo_accueil logo_js" src="Images/logo/javascript_icon.png" alt="logo js">
-            <img class="logo_accueil logo_python" src="Images/logo/python_icon.png" alt="logo python">
-            <img class="logo_accueil logo_django" src="Images/logo/django_icon.png" alt="logo django">
+
         </figure>
-        <p class="text_pres">Loïc PLANAT <br> Développeur Python/Web</p>
+        <div class="text_et_logo">
+            <p class="text_pres">Loïc PLANAT <br> Développeur Python/Web</p>
+            <div class="group_logo">
+                <img class="logo_accueil logo_html" src="Images/logo/html_icon.png" alt="logo html">
+                <img class="logo_accueil logo_css" src="Images/logo/css_icon.png" alt="logo css">
+                <img class="logo_accueil logo_js" src="Images/logo/javascript_icon.png" alt="logo js">
+                <img class="logo_accueil logo_python" src="Images/logo/python_icon.png" alt="logo python">
+                <img class="logo_accueil logo_django" src="Images/logo/django_icon.png" alt="logo django">
+  
+            </div>
+        </div>
     </div>
     
     <!-- Profile -->
@@ -177,15 +183,22 @@
         <!-- Liste des projets -->
         <h1 class="big_title">Les projets sur lesquels j'ai travaillé </h1>
         <div class="header_proj">
-            <p>Cliquez sur le projet pour plus de détail. <br> Pour en savoir plus sur le code des projets, suivez le lien Github .</p>
-        <div class="github">
-            <img class="logo_github" src="Images/logo/github_icon.png" alt="icon github">
-            <a class="link_github" href="https://github.com/Yonohi">Github</a>
-        </div>
+            <div class="bloc_click">
+                <p class="text_click">Cliquez sur le projet pour plus de détails.</p> 
+                <div class="container_click">
+                    <img class="click" src="Images/logo/click_icon.png" alt="image click">                
+                </div>      
+            </div>
+            <div class="bloc_github">
+                <p class="text_github">Pour en savoir plus sur le code des projets.</p>
+                <div class="github">
+                    <img class="logo_github" src="Images/logo/github_icon.png" alt="icon github">
+                    <a class="link_github" href="https://github.com/Yonohi">Github</a>
+                </div>   
+            </div>
         </div>
         <div class="card_list">
             <div class="card">
-                <img class="click" src="Images/logo/click_icon.png" alt="image click">
                 <h2 class="card_title" id="project_1">Projet n°1</h2>
                 <p class="short_desc">Planning de formation et veille technologique</p>
                 <div class="card_content left" id="card_1">
@@ -449,10 +462,10 @@
     <div class="zone cv" id="cv">
         <h1 class="big_title">Mon CV</h1>
         <p>Mon CV au format PDF.</p>
-        <form method="get" action="CV_final_planat_loic.pdf">
+         <img class="img_cv" src="CV_final_planat_loic.jpg" alt="aperçu CV">
+         <form method="get" action="CV_final_planat_loic.pdf">
             <button type="submit">Download</button>
          </form>
-         <img class="img_cv" src="CV_final_planat_loic.jpg" alt="aperçu CV">
     </div>
     <!-- Zone Me Suivre -->
     <div class="zone follow" id="follow">

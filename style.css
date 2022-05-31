@@ -8,6 +8,9 @@
 :root {
     /* Color */
     --backgr-color: linear-gradient(rgb(189, 71, 71) 25vh, rgb(245, 215, 215) 100vh);
+    --backgr-zone1: rgb(189, 71, 71);
+    --backgr-zone2: rgb(245, 215, 215);
+    --backgr-circle: rgb(245, 215, 215);
     --backgr-nav-color: rgb(189, 71, 71);
     --backgr-proj: rgb(189, 71, 71);
     --text-body-color: black;
@@ -31,7 +34,7 @@ html {
 }
 
 body {
-    background-image: var(--backgr-color)  ;
+    /* background-image: var(--backgr-color)  ; */
     color: var(--text-body-color);
     margin: 0; 
 }
@@ -94,6 +97,7 @@ ul {
     margin: 10px 10%;
     width: auto;
     cursor: pointer;
+    border: 5px var(--title-bg-color) solid;
 }
 
 .short_desc {
@@ -157,6 +161,7 @@ ul {
     margin: auto;
     font-size: var(--text-size-nav);
     z-index: 20;
+    border-right: 5px white solid;
 }
 
 
@@ -223,43 +228,71 @@ ul {
     margin-left: 180px;
     font-family: 'Roboto', sans-serif;
     font-size: var(--text-size-body);
-    background-image: url(Images/petales.png);
-    background-size: 600px;
+    /* background-image: url(Images/petales.png); */
+    /* background-size: 600px; */
 }
 
 /* Accueil */
+.home {
+    background-color: var(--backgr-zone1);
+    background-image: url(Images/petales.png);
+    background-size: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.4em;
+}
 
 .bg_cerisier {
     position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 65vw;
+    top: -100px;
+    left: -180px;
+    width: 65vw;
+    min-width: 750px;
 }
 
 .circle {
     position: absolute;
+    top: -200px;
+    right: -200px;
     display: block;
     border-radius: 100%;
-    height: 300px;
-    width: 300px;
+    min-height: 500px;
+    min-width: 500px;
+    height: 40vw;
+    width: 40vw;
     margin: 0;
-    background: radial-gradient(circle at 50px 50px, var(--backgr-nav-color), white);
+    background: whitesmoke;
     box-shadow: 0px 0px 10px 4px white;
 }
-
-.logo_accueil {
+.text_et_logo {
     position: absolute;
-    height: 100px;
+    bottom: 100px;
+    text-align: center;
+    z-index: 1;
+}
+.group_logo {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    min-width: 600px;
+}
+.logo_accueil {
+    position: block;
+    height: 80px;
     z-index: 1;
 }
 
 .logo_accueil:hover {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(0%, -30%) scale(1.2);
     transition: 0.5s;
 }
 
-/* Trigonométrie SOH CAH TOA */
-.logo_django {
+/* Trigonométrie SOH CAH TOA  Ancien positionnement*/
+/* .logo_django {
     top:110.676%;
     left: 5.916%;
     transform: translate(-50%, -50%);
@@ -287,25 +320,24 @@ ul {
     top:26.824%;
     left: -21.329%;
     transform: translate(-50%, -50%);
-}
+} */
 
 .text_pres {
     text-align: center;
-    z-index: 1;
     font-family: 'Caveat', cursive;
-    color: white;
+    color: black;
     font-size: 1.3em;
 }
 
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    font-size: 1.4em;
-}
 
 /* Profil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgr-zone2);
+    background-image: url(Images/petales.png);
+    background-size: 600px;
+}
 .plan {
     height: calc(var(--width-story)*0.7);
     width: var(--width-story);
@@ -439,10 +471,7 @@ ul {
 }
 
 
-.profile {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .text_bloc {
     display: flex;
@@ -451,8 +480,18 @@ ul {
 }
 
 .tome {
+    background-color: var(--backgr-zone1);
     font-family: 'Archivo Black', sans-serif;
+    color: white;
     align-self: center;
+    width: 50vw;
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: -2vw;
+    padding: 5px 20px;
+
 }
 .text_bloc p {
     width: 80%;
@@ -461,16 +500,46 @@ ul {
 }
 
 /* Work */
+.work {
+    background-color: var(--backgr-zone1);
+    background-image: url(Images/petales.png);
+    background-size: 600px;
+}
 .header_proj {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
 }
+.bloc_click {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgr-nav-color);
+    border-radius: 15px;
+    padding: 0 2vw;
+    width: 25%;
+    min-width: calc(350px - 4vw);
+    border: 5px white solid;
+}
+.bloc_github {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgr-nav-color);
+    border-radius: 15px;
+    padding: 0 2vw;
+    width: 25%;
+    min-width: calc(350px - 4vw);
+    border: 5px white solid;
+
+}
+
 .github {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 20px;
+    margin-left: 10px;
+
 }
 
 .link_github {
@@ -480,21 +549,25 @@ ul {
     margin-right: 5%;
     font-size: 1.2em;
 }
+.container_click {
+
+    text-align: center;
+}
 .click {
-    position: absolute;
-    left: 10%;
-    top: 10px;
-    transform: translate(-50%, -50%) rotate(160deg);
+    filter: brightness(100);
+    margin-left: 10px;
 }
 
 .card_title:hover {
     background-color : rgb(189, 71, 71);
     color: white;
+    border: 5px white solid;
 }
 
 .card_title.active {
     background-color: rgb(189, 71, 71);
     color: white;
+    border: 5px white solid;
 }
 
 .card_list {
@@ -524,13 +597,14 @@ ul {
     min-height: 20vh;
     /* on enlève 30px de padding */
     width: calc(96vw - 210px);
-    top: -41px;
+    top: -46px;
     padding: 15px;
     border-radius: 20px; 
     z-index: 1;
     display: none;
     flex-wrap: wrap;
     justify-content: center;
+    border: 5px white solid;
 }
 
 .card .right {
@@ -580,6 +654,14 @@ ul {
 }
 
 /* CV */
+.cv {
+    background-color: var(--backgr-zone2);
+    background-image: url(Images/petales.png);
+    background-size: 600px;
+}
+.cv p {
+    text-align: center;
+}
 
 button {
     background-color: rgb(189, 71, 71);
@@ -589,6 +671,9 @@ button {
     padding: 8px 15px;
     font-family: 'Archivo Black', sans-serif;
     transition-duration: 0.2s;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 button:hover {
@@ -603,6 +688,11 @@ button:hover {
 }
 
 /* Me Suivre */
+.follow {
+    background-color: var(--backgr-zone1);
+    background-image: url(Images/petales.png);
+    background-size: 600px;
+}
 
 .linkedin {
     display: flex;
@@ -674,20 +764,31 @@ button:hover {
     .true_body {
         margin-left: 0;
         position:relative;
-        top: -80px;
         background-image: url(Images/petales.png );
         background-size: 200px;
+    }
+    .zone.home {
+        height: calc(100vh - 80px);
+        min-height: auto;
     }
     .big_title {
         margin-top: 80px;
 
     }
+    .bloc_click {
+        min-width: calc(250px - 4vw);
+    }
+    .bloc_github {
+        min-width: calc(250px - 4vw);
+    }
     .card_list {
         width: 96vw;
     }
     .bg_cerisier {
-        left: -4vw;
-        max-width: 100vw;
+        width: 100vw;
+        min-width: auto;
+        left: -10%;
+        top:-150px;
     }
     .circle {
         display: none;
@@ -702,6 +803,7 @@ button:hover {
     }
     .tome {
         font-size: var(--text-size-tome);
+        width: 50vw;
     }
     .card_content {
         width: calc(96vw - 30px);
@@ -755,6 +857,25 @@ button:hover {
     .nav_link {
         margin-left: 0;
     }
+    .zone.home {
+        height: calc(100vh - 60px);
+    }
+    .bg_cerisier {
+        width: 100vw;
+        min-width: auto;
+        left: -10%;
+        top:-60px;
+    }
+    .group_logo {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        width: 50vw;
+        min-width: 300px;
+    }
+    .logo_accueil {
+        height: 50px;
+    }
     .big_title {
         margin-bottom: 10px;
     }
@@ -764,11 +885,19 @@ button:hover {
     .in_circle {
         font-size: var(--text-size-in-circle);
     }
-    .tome {
-        font-size: var(--text-size-tome);
+    .bloc_click {
+        width: 60%;
+        min-width: auto;
+        margin-bottom: 10px;
+    }
+    .bloc_github {
+        width: 60%;
+        min-width: auto;
     }
     .header_proj {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .header_proj p {
         order: 2;
@@ -795,5 +924,10 @@ button:hover {
     }
     .close {
         top: calc(1% + 60px);
+    }
+}
+@media screen and (max-height: 570px) {
+    .nav_footer {
+        display: none;
     }
 }
