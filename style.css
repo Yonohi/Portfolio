@@ -1,5 +1,6 @@
 /*========= Google fonts =========*/
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oleo+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
@@ -8,7 +9,7 @@
 :root {
     /* Color */
     --backgr-color: linear-gradient(rgb(189, 71, 71) 25vh, rgb(245, 215, 215) 100vh);
-    --backgr-zone1: rgb(189, 71, 71);
+    --backgr-zone1: rgb(197, 101, 101);
     --backgr-zone2: rgb(245, 215, 215);
     --backgr-circle: rgb(245, 215, 215);
     --backgr-nav-color: rgb(189, 71, 71);
@@ -20,7 +21,7 @@
 
     /* Font size */
     --text-size-nav: 1.3em;
-    --text-size-nav-citation : 1em;
+    --text-size-nav-citation : 0.8em;
     --text-size-body: 1.2em;
     --text-size-big-title: 1.5em;
     --title-mini-size: 1.2em;
@@ -217,8 +218,9 @@ ul {
 }
 
 .nav_footer {
-    font-family: 'Caveat', cursive;
+    font-family: 'Archivo', 'sans-serif';
     font-size: var(--text-size-nav-citation);
+    font-style: italic;
     padding: 10px;
 }
 
@@ -235,8 +237,8 @@ ul {
 /* Accueil */
 .home {
     background-color: var(--backgr-zone1);
-    background-image: url(Images/petales.png);
-    background-size: 600px;
+    /* background-image: url(Images/petales.png);
+    background-size: 600px; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -247,10 +249,27 @@ ul {
 
 .bg_cerisier {
     position: absolute;
-    top: -100px;
-    left: -180px;
-    width: 65vw;
-    min-width: 750px;
+    bottom: 28%;
+    left: -8vh;
+    width: 80vw;
+}
+.img_cerisier {
+    height: 100%;
+    width: 100%;
+}
+.line {
+    height: 10px;
+    background-color: white;
+    margin: 0 0 20px 0;
+    width: calc(80vw - 180px);
+}
+.right_line {
+    position: relative;
+    left: 10vw;
+}
+.left_line {
+    position: relative;
+    left: -10vw;
 }
 
 .circle {
@@ -269,7 +288,11 @@ ul {
 }
 .text_et_logo {
     position: absolute;
-    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 12vh;
     text-align: center;
     z-index: 1;
 }
@@ -279,6 +302,7 @@ ul {
     justify-content: space-around;
     width: 50vw;
     min-width: 600px;
+    margin-bottom: 10px;
 }
 .logo_accueil {
     position: block;
@@ -324,9 +348,18 @@ ul {
 
 .text_pres {
     text-align: center;
-    font-family: 'Caveat', cursive;
-    color: black;
+    color: white;
+    margin: 5px;
+}
+.nom {
+    font-family: 'Archivo Black', sans-serif;
     font-size: 1.3em;
+
+}
+.travail {
+    font-weight: 100;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1em;
 }
 
 
@@ -335,8 +368,8 @@ ul {
     display: flex;
     flex-direction: column;
     background-color: var(--backgr-zone2);
-    background-image: url(Images/petales.png);
-    background-size: 600px;
+    /* background-image: url(Images/petales.png);
+    background-size: 600px; */
 }
 .plan {
     height: calc(var(--width-story)*0.7);
@@ -502,8 +535,8 @@ ul {
 /* Work */
 .work {
     background-color: var(--backgr-zone1);
-    background-image: url(Images/petales.png);
-    background-size: 600px;
+    /* background-image: url(Images/petales.png);
+    background-size: 600px; */
 }
 .header_proj {
     display: flex;
@@ -656,8 +689,8 @@ ul {
 /* CV */
 .cv {
     background-color: var(--backgr-zone2);
-    background-image: url(Images/petales.png);
-    background-size: 600px;
+    /* background-image: url(Images/petales.png);
+    background-size: 600px; */
 }
 .cv p {
     text-align: center;
@@ -690,8 +723,8 @@ button:hover {
 /* Me Suivre */
 .follow {
     background-color: var(--backgr-zone1);
-    background-image: url(Images/petales.png);
-    background-size: 600px;
+    /* background-image: url(Images/petales.png);
+    background-size: 600px; */
 }
 
 .linkedin {
@@ -723,6 +756,7 @@ button:hover {
         left: 0;
         width: 100vw;
         height: 80px;
+        border-right: none;
     }
     .nav {
         height: 100%;
@@ -764,13 +798,19 @@ button:hover {
     .true_body {
         margin-left: 0;
         position:relative;
-        background-image: url(Images/petales.png );
-        background-size: 200px;
+        /* background-image: url(Images/petales.png );
+        background-size: 200px; */
     }
     .zone.home {
-        height: calc(100vh - 80px);
-        min-height: auto;
+        height: calc(100vh + 80px);
     }
+    .text_et_logo{
+        bottom: calc(12vh + 80px);
+    }
+    .line {
+        width: 80vw;
+    }
+
     .big_title {
         margin-top: 80px;
 
@@ -786,17 +826,11 @@ button:hover {
     }
     .bg_cerisier {
         width: 100vw;
-        min-width: auto;
-        left: -10%;
-        top:-150px;
+        bottom: 35%;
+    
     }
     .circle {
         display: none;
-    }
-
-    .text_pres {
-        color: black;
-        font-weight: bolder;
     }
     .in_circle {
         font-size: 0.7em;
@@ -858,13 +892,10 @@ button:hover {
         margin-left: 0;
     }
     .zone.home {
-        height: calc(100vh - 60px);
+        height: calc(100vh + 60px);
     }
-    .bg_cerisier {
-        width: 100vw;
-        min-width: auto;
-        left: -10%;
-        top:-60px;
+    .text_et_logo{
+        bottom: calc(12vh + 60px);
     }
     .group_logo {
         text-align: center;
