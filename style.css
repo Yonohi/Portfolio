@@ -315,10 +315,16 @@ ul {
     transition: 0.5s;
 }
 .logo_django {
-    transform: scale(1.4);
+    transform: scale(1.45);
 }
 .logo_django:hover {
-    transform: translate(0%, -30%) scale(1.6);
+    transform: translate(0%, -30%) scale(1.65);
+}
+.logo_css {
+    transform: scale(1.13);
+}
+.logo_css:hover {
+    transform: translate(0%, -30%) scale(1.33);
 }
 
 /* Trigonométrie SOH CAH TOA  Ancien positionnement*/
