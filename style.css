@@ -677,6 +677,10 @@ ul {
     align-items: center;
     margin: 3%;
 }
+.card_content a {
+    text-align: center;
+    width: 100%;
+}
 .conteneur_img_modal {
     display: flex;
     position: relative;
@@ -704,6 +708,12 @@ ul {
     background-color: var(--backgr-zone2);
     /* background-image: url(Images/petales.png);
     background-size: 600px; */
+
+}
+.container_cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .cv p {
     text-align: center;
@@ -717,9 +727,8 @@ button {
     padding: 8px 15px;
     font-family: 'Archivo Black', sans-serif;
     transition-duration: 0.2s;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
+    margin: 20px 0;
+
 }
 
 button:hover {

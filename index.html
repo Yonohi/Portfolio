@@ -328,9 +328,9 @@
                         <br> L'algorithme brute force vise à tester toutes les possibilités et trouver la ou les meilleures en cas d'égalité tandis que l'amélioré vise l'efficacité (vitesse, résultats presque parfaits).
                         <br> J'ai trouvé passionnant de m'informer sur la complexité temporelle et spatiale, la notation Big-O. 
                         <br> Je vous laisse la présentation que j'ai fait pour le projet en téléchargement.</p>
-                    <form class="btn_pres" method="get" action="P7_04_diapositives.pdf">
-                            <button type="submit">Download</button>
-                    </form>
+                    <a href="P7_04_diapositives.pdf" download="P7_Diapositives.pdf">
+                        <button type="button">Download</button>
+                    </a>
                     <figure class="bloc_img">
                         <img src="Images/P7/P7_bruteforce.png" alt="exemple résultat bruteforce" onclick="biggerImg(this)" class="proj_img">
                         <figcaption>Exemple de résultat du Brute Force</figcaption>
@@ -464,11 +464,15 @@
     <!-- Zone CV -->
     <div class="zone cv" id="cv">
         <h1 class="big_title">Mon CV</h1>
-        <p>Mon CV au format PDF.</p>
-         <img class="img_cv" src="CV_final_planat_loic.jpg" alt="aperçu CV">
-         <form method="get" action="CV_final_planat_loic.pdf">
-            <button type="submit">Download</button>
-         </form>
+        <div class="container_cv">
+            <p>Mon CV au format PDF.</p>
+            <div>
+                <img class="img_cv" src="CV_final_planat_loic.jpg" alt="aperçu CV">
+            </div>
+            <a href="CV_final_planat_loic.pdf" download="CV_planat_loic.pdf">
+                <button type="button">Download</button>
+            </a>
+        </div>
     </div>
     <!-- Zone Me Suivre -->
     <div class="zone follow" id="follow">
