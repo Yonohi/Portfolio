@@ -746,7 +746,16 @@ button:hover {
     margin-left: 10px;
     font-size: 1.2em;
 }
-
+.merci {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.822);
+    margin: 0;
+    padding: 10px;
+}
 /* Media queries */
 @media screen and (max-width: 900px) {
     :root {
