@@ -605,13 +605,13 @@ ul {
 }
 
 .card_title:hover {
-    background-color : rgb(189, 71, 71);
+    background-color : var(--backgr-zone1);
     color: white;
     border: 5px white solid;
 }
 
 .card_title.active {
-    background-color: rgb(189, 71, 71);
+    background-color: var(--backgr-zone1);
     color: white;
     border: 5px white solid;
 }
@@ -638,7 +638,7 @@ ul {
 
 .card_content {
     position: relative;
-    background-image: linear-gradient(rgb(189, 71, 71), rgb(245, 215, 215));
+    background-image: linear-gradient(var(--backgr-zone1), rgb(245, 215, 215));
     color: white;
     min-height: 20vh;
     /* on enlève 30px de padding */
