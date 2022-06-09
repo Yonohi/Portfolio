@@ -44,6 +44,10 @@ body {
     font-family: 'Archivo Black', sans-serif;
 }
 
+blockquote {
+    margin: 0;
+}
+
 a.nav_link {
     text-decoration: none;
     color: var(--text-color);
